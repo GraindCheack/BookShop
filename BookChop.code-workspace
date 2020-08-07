@@ -4,5 +4,7 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python.pythonPath": "C:\\Users\\Лена\\.virtualenvs\\BookShop-O6EAvd8q\\Scripts\\python.exe"
+	}
 }
