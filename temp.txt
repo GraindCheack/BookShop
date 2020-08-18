@@ -1,0 +1,51 @@
+GET
+http://127.0.0.1:8000/dashboard/api/bookshop/amount
+{
+  amount: 500;
+}
+
+
+GET
+http://127.0.0.1:8000/dashboard/api/bookshop/authors/?name=sadas
+{
+ 1: {
+   id: 1;
+   f...
+ }
+}
+
+GET
+http://127.0.0.1:8000/dashboard/api/bookshop/last_year
+{
+  1: 123;
+  2: 424;
+  3: 211;
+  ...
+  12: 213;
+}
+
+GET
+http://127.0.0.1:8000/dashboard/api/bookshop/book_list
+{
+  1: {
+    name: 213;
+    author: {
+      id: 1;
+      f...
+    }
+    article: asd224;
+  }
+}
+
+POST
+http://127.0.0.1:8000/dashboard/api/bookshop/book_list
+{
+  name: "asd";
+  article: "123fd";
+  author: 
+  {
+    f...
+  };
+}
+
+
