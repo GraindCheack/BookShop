@@ -1,0 +1,104 @@
+body {
+  font-family: 'Fira Sans';
+  font-weight: normal;
+  color: #3F3F3F;
+}
+
+@media (max-width: 575.98px) { 
+  body {
+    font-size: 18px;
+  }
+
+  .card-block {
+    width: 100%;
+  }
+
+  .create-inp-grp {
+    width: 90%;
+  }
+
+  .create-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 575.98px) { 
+  body {
+    font-size: 24px;
+  }
+
+  .card-block {
+    width: 90%;
+  }
+
+  .create-inp-grp {
+    width: 70%;
+  }
+
+  .create-btn {
+    font-size: 3rem;
+  }
+}
+
+.graph text {
+  font: 16px Fira Sans;
+  fill: #3F3F3F;
+}
+
+.graph circle {
+  fill: #3F3F3F;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: ease 0.2s;
+  color: #3F3F3F;
+}
+
+main {
+  background: #F7F8FB;
+  box-shadow: inset 0px 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+
+.title {
+  font-size: 3.5rem;
+}
+
+/* Header-account */
+
+.acc a:hover {
+  color: #D44B3D;
+}
+
+/* Header-navigation */
+
+.nav a:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 0.9;
+}
+
+/* Dashboard */
+
+.dashboard-block {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  padding: 8px 24px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-block__number {
+  font-size: 2.2rem;
+}
+
+/* Book list */
+
+

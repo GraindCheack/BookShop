@@ -1,0 +1,23 @@
+body {
+  font-family: 'Fira Sans';
+  font-weight: normal;
+  color: #3F3F3F;
+}
+
+@media (max-width: 575.98px) { 
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 575.98px) { 
+  body {
+    font-size: 24px;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: ease 0.2s;
+  color: #3F3F3F;
+}

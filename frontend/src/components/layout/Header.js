@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { SITE_URL } from '../../conf';
+import { AuthNav } from './AuthNav';
+import { AccNav } from './AccNav';
 
 function Header (params){
-  const { activeEl } = params
+  const { activeEl, auth } = params
 
   return (
     <header>
@@ -16,28 +17,21 @@ function Header (params){
           </div>
           <div className="col-12 text-left col-md-auto d-flex align-items-center justify-content-center acc">
             <img src="/static/frontend/images/account_icon.svg" style={{width: "36px", height: "36px"}}/>
-            <a href={SITE_URL + 'login'} className="ml-3 acc-link">Sign in</a>
-            <a href={SITE_URL + 'register'} className="ml-3 acc-link">Sign up</a>
+            {auth.isAuthenticated ? <AccNav auth={auth}/>: <AuthNav/>}
           </div>
         </div>
         <div className="row align-items-center nav">
-            <Link className="py-3 col col-md-5 col-lg-4 text-right" to="/dashboard" style={
+            <Link className="py-3 col col-md-5 col-lg-4 text-right" to="/dashboard/" style={
               (activeEl==="Dashboard" && {background: "#EA5445", color: "white"}) ||
               {background: "#D44B3D"}
             }>Dashboard</Link>
-            <Link className="py-3 col text-left" to="/book_list" style={
+            <Link className="py-3 col text-left" to="/home" style={
               (activeEl==="Book list" && {background: "#EA5445", color: "white"}) ||
               {background: "#D44B3D"}
             }>Books list</Link>
         </div>
       </div>
-      
-      
-      {/* <div style={{ borderRadius: '0' }}>
-        <a href={SITE_URL + 'login'}>
-          login
-        </a>
-      </div> */}
+    
     </header>
   );
 }
